@@ -86,7 +86,7 @@ The application uses the Next.js App Router and separates networking calculation
 
 ## Privacy
 
-NetKit is designed to perform its networking calculations locally without requiring:
+NetKit performs its networking calculations locally and does not require:
 
 - User accounts
 - Database storage
@@ -101,3 +101,80 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/joshuaansiboy/netkit.git
+```
+
+Navigate to the project:
+
+```bash
+cd netkit
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+## Testing and Quality
+
+NetKit includes automated tests for its core networking and calculation logic.
+
+Latest production checks:
+
+- 25 automated tests passing
+- ESLint passing
+- TypeScript type checking passing
+- Next.js production build passing
+- 0 vulnerabilities reported by `npm audit --audit-level=moderate`
+
+Run the quality checks with:
+
+```bash
+npm test
+npm run lint
+npx tsc --noEmit
+npm run build
+npm audit --audit-level=moderate
+```
+
+## Current Limitations
+
+NetKit currently focuses on IPv4 networking.
+
+- IPv6 utilities are not currently included.
+- Special-purpose IP classifications are curated rather than exhaustive.
+- The port reference contains commonly used ports and is not an exhaustive registry.
+- Bandwidth calculations are theoretical estimates and real-world transfer speeds may differ.
+- NetKit does not perform network scanning, ping, traceroute, DNS lookup, IP geolocation, speed testing, or server monitoring.
+
+## Possible Future Improvements
+
+Future versions may explore:
+
+- IPv6 utilities
+- Additional networking references
+- More educational networking tools
+
+These are possible improvements rather than committed features.
+
+## Author
+
+**Joshua Ansiboy**
+
+GitHub: [@joshuaansiboy](https://github.com/joshuaansiboy)
+
+---
+
+Built as a practical networking and web development project.
